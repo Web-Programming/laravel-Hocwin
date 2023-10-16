@@ -20,6 +20,9 @@
         <li>Belum ada data</li>
     @endif
 </ul>
+
+<x-alert/>
+<input/form-alert/>
 @endsection
 
 <!-- @include('layout.footer') -->
