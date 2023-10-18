@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -91,3 +92,5 @@ Route::get('/fakultas', function(){
    $fakultas = ["Fakultas Ilmu Komputer dan Rekayasa", "Fakultas Ilmu Ekonomi"];
    return view('fakultas.index',compact('fakultas', 'kampus'));
 });
+
+Route::GET('/prodi', [ProdiController::class, 'index']);
