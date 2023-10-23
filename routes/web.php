@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\Mahasiswacontroller;
 use App\Http\Controllers\ProdiController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,14 +27,14 @@ Route::get('/profil', function () {
 });
 
 // route dengan parameter (wajib)
-Route::get('/mahasiswa/{nama}', function ($nama = "Hocwin") {
-    echo "<h1>Halo Nama saya $nama</h2>";
-});
+// Route::get('/mahasiswa/{nama}', function ($nama = "Hocwin") {
+//     echo "<h1>Halo Nama saya $nama</h2>";
+// });
 
 // route dengan parameter (tidak wjb)
-Route::get('/mahasiswa/{nama?}', function ($nama = "Hocwin") {
-    echo "<h1>Halo Nama saya $nama</h2>";
-});
+// Route::get('/mahasiswa/{nama?}', function ($nama = "Hocwin") {
+//     echo "<h1>Halo Nama saya $nama</h2>";
+// });
 
 // route dengan parameter lbh dari 1
 Route::get('/profil/{nama}/{pekerjaan?}', function ($nama = "Hocwin", $pekerjaan = "Mahasiswa") {
@@ -100,3 +101,8 @@ Route::GET('/prodi', [ProdiController::class, 'index']);
 Route::resource("/kurikulum", KurikulumController::class);
 
 Route::apiResource("/dosen", DosenController::class);
+
+Route::get("/mahasiswa/insert-elq", [Mahasiswacontroller::class, 'insertElq']);
+Route::get("/mahasiswa/update-elq", [Mahasiswacontroller::class, 'updateElq']);
+Route::get("/mahasiswa/delete-elq", [Mahasiswacontroller::class, 'deleteElq']);
+Route::get("/mahasiswa/select-elq", [Mahasiswacontroller::class, 'selectElq']);
