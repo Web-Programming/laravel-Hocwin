@@ -106,3 +106,5 @@ Route::get("/mahasiswa/insert-elq", [Mahasiswacontroller::class, 'insertElq']);
 Route::get("/mahasiswa/update-elq", [Mahasiswacontroller::class, 'updateElq']);
 Route::get("/mahasiswa/delete-elq", [Mahasiswacontroller::class, 'deleteElq']);
 Route::get("/mahasiswa/select-elq", [Mahasiswacontroller::class, 'selectElq']);
+
+Route::get('/prodi/all-join-facade', [ProdiController::class, 'allJoinFacade']);
