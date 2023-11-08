@@ -3,9 +3,9 @@
 
 @section('content')
 <h2>Program Studi</h2>
-<table class="table table-striped">
+<table border='2px' class="table table-striped">
     <thead>
-        <tr>
+        <tr align="center">
             <th>NPM</th>
             <th>Nama Mahasiswa</th>
             <th>Nama Prodi</th>
@@ -13,9 +13,9 @@
     </thead>
     <tbody>
         @foreach ($allmahasiswaprodi as $item)
-        <tr>
+        <tr align="center">
             <td>{{$item->npm}}</td>
-            <td>{{$item->nama_mahasiswa}}</td>
+            <td>{{$item->nama}}</td>
             <td>{{$item->nama_prodi}}</td>
         </tr>
         @endforeach

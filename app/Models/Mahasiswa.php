@@ -17,4 +17,8 @@ class Mahasiswa extends Model
 
     // untuk mengatur kolom yang tidak boleh di isi
     protected $guard =[];
+
+    public function prodi(){
+        return $this->belongsTo('App\Models\Prodi');
+    }
 }
